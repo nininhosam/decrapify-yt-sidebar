@@ -119,7 +119,7 @@ function onDomChanged() {
             let homeButtons = foundHomeSection.querySelectorAll("div#items ytd-guide-entry-renderer");
             let hasSubscriptionsButton = [...homeButtons].some(x =>
                 subscriptionText.includes(
-                    x.querySelector("a#endpoint tp-yt-paper-item yt-formatted-string").innerText
+                    x.querySelector("a#endpoint tp-yt-paper-item yt-formatted-string").innerText.toLowerCase()
                 ));
 
             if(!hasSubscriptionsButton) {
